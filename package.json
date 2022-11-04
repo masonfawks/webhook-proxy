@@ -1,9 +1,9 @@
 {
     "scripts": {
         "prepare": "npx prisma generate",
-        "update": "git pull && yarn && yarn build && pm2 reload webhook-proxy webhook-proxy-processor || true",
+        "update": "git pull && npm && npm build && pm2 reload webhook-proxy webhook-proxy-processor || true",
         "build": "prisma migrate deploy && prisma generate && rimraf dist && tsc",
-        "start": "yarn build && node dist"
+        "start": "npm start"
     },
     "dependencies": {
         "@prisma/client": "^3.14.0",
